@@ -1,0 +1,5 @@
+Import / Export via Android SAF:
+    - Helper class per platform implements common Interface
+    https://github.com/libgdx/libgdx/wiki/Interfacing-with-platform-specific-code
+    - CrashReportSender as template
+    https://developer.android.com/training/data-storage/shared/documents-files
