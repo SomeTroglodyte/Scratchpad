@@ -22,12 +22,6 @@ If you can't clone your fork of the repo due to login/authentication errors, con
 
 If you generate a key, you'll want to decide whether it can be reused (just use or generate a default one) or it's meant to be specific for github development, and whether to use an empty passphrase or maximize security - beware that you'll need to actually type it at least once; as pasting a keepass-generated password won't work in all places, the `ssh-add` command blocks the clipboard by design. You will also need that passphrase at least once while cloning your repo in Android Studio. You will also have to decide on a filename and the "comment" field - I'd suggest using the actual github account name for the former and the actual email the account is registered to for the latter. I suspect, however, that neither match is strictly necessary.
 
-### Markdown
-It might be useful to have markdown support as some documents a contributor might want to edit are Markdown, e.g. source attribution for imported open media resources.
-
-There's an IntelliJ [plugin for Markdown fom JetBrains](https://plugins.jetbrains.com/plugin/7793-markdown) that can be installed directly from the Settings Plugins page.
-A nice Markdown cheat sheet is [here](https://www.markdownguide.org/cheat-sheet).
-
 ### Shell code
 *do not execute everything blindly*
 ```bash
@@ -56,3 +50,25 @@ ssh-add ./<filename>
 ssh-add -L
 # copy the whole line corresponding to your new key, and in your browser go to yout github profile settings, "SSH and GPG keys" section, add new and paste that line. Done!
 ```
+
+### Markdown
+It might be useful to have markdown support as some documents a contributor might want to edit are Markdown, e.g. source attribution for imported open media resources.
+
+There's an IntelliJ [plugin for Markdown fom JetBrains](https://plugins.jetbrains.com/plugin/7793-markdown) that can be installed directly from the Settings Plugins page.
+
+A nice Markdown cheat sheet is [here](https://www.markdownguide.org/cheat-sheet) - though only 90% applies to files that will be rendered by github. Particularly, footnotes work differently.
+
+### Initial Run Config
+The existing [Getting-Started](https://github.com/yairm210/Unciv/wiki/Getting-Started) says to "set <repo_folder>\android\assets\ as the Working directory", but I prefer a slight modification.
+
+Ouside the folder the IDE sees as the mirror of your fork, say that is ~/Development/foo/bar/Unciv, create a parallel on for use as Working directory, which might be ~/Development/foo/bar/Unciv.workdir, and set that in your desktop run config. Then link some subfolders from the mentioned assets folder and copy the textures:
+```bash
+# cd to your new empty working folder (or use the open in terminal feature of your file manager)
+ln -s ../Unciv/android/assets/ExtraImages
+ln -s ../Unciv/android/assets/jsons
+ln -s ../Unciv/android/assets/skin
+ln -s ../Unciv/android/assets/sounds
+cp ../Unciv/android/assets/*.atlas .
+cp ../Unciv/android/assets/*.png .
+```
+This means data added due to playtesting will not affect commits and you can test with mods without them appearing in Android Studio, no need to fiddle with exlusions and making sure the exclusion list does not end up in a commit - except if you use the "generate translation files" button. Caveat: If your proposed change actually needs to change the atlas/texture files that should be part of a release, you'll have to copy them back manually.
