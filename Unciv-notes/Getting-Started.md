@@ -1,4 +1,4 @@
-## Comments on Unciv "getting started"
+## Comments on Unciv "[Getting Started](https://github.com/yairm210/Unciv/wiki/Getting-Started)"
 Specific to a fresh installation on Mint 20.1 (ubuntu 20.04 focal)
 
 ### Android Studio
@@ -61,7 +61,7 @@ A nice Markdown cheat sheet is [here](https://www.markdownguide.org/cheat-sheet)
 ### Initial Run Config
 The existing [Getting-Started](https://github.com/yairm210/Unciv/wiki/Getting-Started) says to "set <repo_folder>\android\assets\ as the Working directory", but I prefer a slight modification.
 
-Ouside the folder the IDE sees as the mirror of your fork, say that is ~/Development/foo/bar/Unciv, create a parallel on for use as Working directory, which might be ~/Development/foo/bar/Unciv.workdir, and set that in your desktop run config. Then link some subfolders from the mentioned assets folder and copy the textures:
+Ouside the folder the IDE sees as the mirror of your fork, say that is `~/Development/foo/bar/Unciv`, create a parallel on for use as Working directory, which might be `~/Development/foo/bar/Unciv.workdir`, and set that in your desktop run config. Then link some subfolders from the mentioned assets folder and copy the textures as follows:
 ```bash
 # cd to your new empty working folder (or use the open in terminal feature of your file manager)
 ln -s ../Unciv/android/assets/ExtraImages
