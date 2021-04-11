@@ -59,9 +59,11 @@ There's an IntelliJ [plugin for Markdown fom JetBrains](https://plugins.jetbrain
 A nice Markdown cheat sheet is [here](https://www.markdownguide.org/cheat-sheet) - though only 90% applies to files that will be rendered by github. Particularly, footnotes work differently.
 
 ### Initial Run Config
+Setting up the desktop run config depends a bit on the IDE knowing about the project contents, so it's best to wait a little after cloning until the initial automatic gradle *sync* has finished, which can take a quarter of an hour. Otherwise the dropdown for "use classpath" will not contain the desktop entry.
+
 The existing [Getting-Started](https://github.com/yairm210/Unciv/wiki/Getting-Started) says to "set <repo_folder>\android\assets\ as the Working directory", but I prefer a slight modification.
 
-Ouside the folder the IDE sees as the mirror of your fork, say that is `~/Development/foo/bar/Unciv`, create a parallel on for use as Working directory, which might be `~/Development/foo/bar/Unciv.workdir`, and set that in your desktop run config. Then link some subfolders from the mentioned assets folder and copy the textures as follows:
+*Outside* the folder which the IDE sees as the mirror of your fork, say that is `~/Development/foo/bar/Unciv`, create a parallel one for use as Working directory, which might be `~/Development/foo/bar/Unciv.workdir`, and set that in your desktop run config. Then link some subfolders from the mentioned assets folder and copy the textures as follows:
 ```bash
 # cd to your new empty working folder (or use the open in terminal feature of your file manager)
 ln -s ../Unciv/android/assets/ExtraImages
