@@ -20,7 +20,7 @@ This is not trivial and you can easily get lost, especially if you're used to Vi
 This needs to be done only once.
 
 * Make sure your local master is marked current. If not, do a checkout.
-* Always do `VCS->Git->Fetch` if you want to make sure your local IDE's knowledge is up to date with the world out on github.
+* Always do `VCS->Git->Fetch` if you want to make sure your local IDE's knowledge is up to date with the world out on github. In my experience, this will not reliably show whether you are behind ([WIP](#wip)). Going to your fork on github will show a correct "This branch is X commits behind yairm210:master" message - the following pull/push procedure still applies.
 * For a visual representation, hit `Alt-9` (not Alt-F9) to have the 'Git' tool pane open in the lower right (assuming you did not customize your IDE too far), then make sure that `Log` is selected on the upper edge of that tool's pane. See commit names and colored lines? Good. Look for the yellow tag, that's where you "are" relative to what your `fetched` set of `remotes` knows about commits.
 
 So the goal now is to get that yellow tag to the top and the corresponding code into your online and local master branches ("master" and "origin/master" in your branches popup)
@@ -39,4 +39,12 @@ If you did all this without some contribution of your own waiting in a separate 
 ### Locally merging a branch before creating a Pull Request from it
 If your proposed contribution works and you have tested it, but have not recently synced with newer upstream commits, do so before pushing your new branch to your github fork. Follow the [Keeping your fork up to date](#keeping-your-fork-up-to-date) chapter above. The state now is even worse than pushing and PR'ing without updating your master first, but after merging and re-testing it will be significantly better!
 
+* So your master moved ahead of the branch your new contribution is in. In the git pane you can visualize this by selecting local master / your branch in the tree on the left and observing the commits list with the colourful lines. Your new branch is missing some commits master already knows about.
+* Make sure your local master is still active/current (has the tag not the star, has no checkout in its context menu)
+* From the git pane's branch tree or the branches popup, right click *on your new branch* and do a `Checkout and rebase onto current`. No messages or popups means your changes were compatible with all the commits you just moved forward (inluded in the base of your branch by rebasing), and you could go ahead and push the branch to your fork and go there to make a PR out of it. If merging needs action, the IDE will tell you so and guide you - will add more next time I experience it ([WIP](#wip)).
+
+
+### WIP
 * **Work in Progress**
+
+Any help welcome!
