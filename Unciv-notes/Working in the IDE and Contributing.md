@@ -5,11 +5,12 @@ This is related to Yair's [From code to deployment](https://github.com/yairm210/
 ### Branches are important
 * Remap ``Ctrl-Shift-` `` if you're not on a US keyboard. You'll need that git branches popup all the time. The other all-important keyboard shortcuts are `Ctrl-K` and `Ctrl-Shift-K`.
 (It's under `File-Settings-Keymap-Version Control Systems-git-*Repository*`)
-* ***Always*** work in a branch.
+* ***Always*** work in a branch (other than master).
 * Keep different matters in different branches and develop them independently. Switch using the branch-popup->checkout. Try to partition your branches in such a way as to include the least possible amount of changes that still work together and produce a playable game.
 * Local changes to files, even if made outside Android Studio (useful!), become part of a branch when you commit. Checkouts apply commits to your local files. Creating a branch does nothing with your local files, so you can create a branch after coding the changes that should go into it, but I prefer always keeping the branch the current coding should go into active, so I create my branches before changing anything.
 * Everything I said so far applies to local branches. The relationship of those to remote branches (which are visible on your github web page) is defined by Push or Pull operations.
 * The simple way to publish a local branch when it is ready is to make sure no local changes are uncommitted, then Push, then go to your for on the web page, then create your Pull Request there. That's fully okay if you can be absolutely sure the files you touched have not been modified by someone else in the meantime - otherwise, you create more work for the boss when merging the PR. To pre-emptively help this, read [below](#keeping-your-fork-up-to-date)
+* There's no reason to keep copies of the upstream non-master branches, so go ahead and delete them right after forking - or later.
 
 ### Keeping your fork up to date
 This is not trivial and you can easily get lost, especially if you're used to Visual Studio/Azure DevOps, where terms like check out or branch simply mean different things than here. If you look at IntelliJ's [Contribute to projects on GitHub](https://www.jetbrains.com/help/idea/2021.1/contribute-to-projects.html), you can see not only do their instructions not match the environment, the video also nicely shows the pros get lost, too.
