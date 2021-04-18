@@ -10,17 +10,17 @@
     * branch: [LinkableCivilopedia1](https://github.com/SomeTroglodyte/Unciv/tree/LinkableCivilopedia1)
 
 #### Shortcuts
-~~* Buying several tiles in city view (buy next ring?)~~
+* ~~Buying several tiles in city view (buy next ring?)~~
 * Buying buildings faster in city view (buy all affordable? buy queue?)
 * Global city construction changes (e.g. all science to gold) -> overview-cities
 * Upgrade all units command in overview-unit
 
 #### Debug
 * Incompatibility More luxuries mod + 5Hex tileset + experimental tile layering: coral+fisheries, barrier reef black
-~~* Pillage / rebuild "city center"~~
-    ~~* seen tiles w/rebuildable center in enemy territory -> the AI does it too~~
-    ~~* review what razing cities code does with improvements~~
-~~* review what razing cities code does with tile ownership - transfer tiles in 5t zone of another city to that city? Even if not connected to tiles already owned by that city? Citadels? Need to know original Civ5 behaviour~~
+* ~~Pillage / rebuild "city center"~~
+    * ~~seen tiles w/rebuildable center in enemy territory -> the AI does it too~~
+    * ~~review what razing cities code does with improvements~~
+* ~~review what razing cities code does with tile ownership - transfer tiles in 5t zone of another city to that city? Even if not connected to tiles already owned by that city? Citadels? Need to know original Civ5 behaviour~~
 * Multiturn movement ETA off, or circles promising tiles reachable this turn that aren't (rivers? cannot be only trigger)
 
 #### Try
