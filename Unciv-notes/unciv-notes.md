@@ -8,8 +8,8 @@
 * Mousewheel in mod manager
 * F1 key to civilopedia
     * branch: [LinkableCivilopedia1](https://github.com/SomeTroglodyte/Unciv/tree/LinkableCivilopedia1)
-* Do not offer Sleep until healed when healing==0 (marine)
-    * Check: Marine supply promotion?
+* Do not offer Sleep until healed when healing==0 (marine -> `MapUnit.rankTileForHealing`)
+    * Check: Is Marine supply promotion Vanilla Civ5?
 
 #### Shortcuts
 * ~~Buying several tiles in city view (buy next ring?)~~
