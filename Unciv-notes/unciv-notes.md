@@ -42,3 +42,6 @@
     * "Remove" actions
     * Great person improvements - "can only be built by"
 * new category UI help including screenshots of world view / city explaining parts
+
+#### Ideas
+* Workable city radius moddable (hardcoded to 3 in CityInfo.setTransients)
