@@ -38,11 +38,15 @@ I did an explicit check on the online fork at this point. Pushing your own contr
 If you did all this without some contribution of your own waiting in a separate branch, you're done. If there is, read on.
 
 ### Locally merging a branch before creating a Pull Request from it
-If your proposed contribution works and you have tested it, but have not recently synced with newer upstream commits, do so before pushing your new branch to your github fork. Follow the [Keeping your fork up to date](#keeping-your-fork-up-to-date) chapter above. The state now is even worse than pushing and PR'ing without updating your master first, but after merging and re-testing it will be significantly better!
+If your proposed contribution works and you have tested it, but have not recently synced with newer upstream commits, do so before pushing your new branch to your github fork. Follow the [Keeping your fork up to date](#keeping-your-fork-up-to-date) chapter above - paying attention to do so with your master branch. The state now is even worse than pushing and PR'ing without updating your master first, but after merging and re-testing it will be significantly better!
 
 * So your master moved ahead of the branch your new contribution is in. In the git pane you can visualize this by selecting local master / your branch in the tree on the left and observing the commits list with the colourful lines. Your new branch is missing some commits master already knows about.
 * Make sure your local master is still active/current (has the tag not the star, has no checkout in its context menu)
-* From the git pane's branch tree or the branches popup, right click *on your new branch* and do a `Checkout and rebase onto current`. No messages or popups means your changes were compatible with all the commits you just moved forward (inluded in the base of your branch by rebasing), and you could go ahead and push the branch to your fork and go there to make a PR out of it. If merging needs action, the IDE will tell you so and guide you - will add more next time I experience it ([WIP](#wip)).
+* From the git pane's branch tree or the branches popup, right click *on your new branch* and do a `Checkout and rebase onto current`. No messages or popups means your changes were compatible with all the commits you just moved forward (inluded in the base of your branch by rebasing), and you could go ahead and push the branch to your fork and go there to make a PR out of it. 
+
+If merging needs action, the IDE will tell you so and guide you - the "Conflicts" window pops up. I suggest ignoring the two buttons "Accept Yours/Theirs", use "Merge". This will pop up a diff for the selected file comparing your source code with your master (now in sync with the current upstream sources). You can choose yours or 'theirs' for every distinct change, and I'd recommend manually choosing for each of them - won't take long. Merge progress can be watched in the upper right corner. Once you have treated _all_ of the differences, a small notice will appear top center "All changes have been processed" - use the `save and..` link offered (wording differs depending on remaining work in other files).
+
+Might add more details next time I experience it ([WIP](#wip)).
 
 
 ### WIP
