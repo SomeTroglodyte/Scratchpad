@@ -46,6 +46,8 @@ If your proposed contribution works and you have tested it, but have not recentl
 
 If merging needs action, the IDE will tell you so and guide you - the "Conflicts" window pops up. I suggest ignoring the two buttons "Accept Yours/Theirs", use "Merge". This will pop up a diff for the selected file comparing your source code with your master (now in sync with the current upstream sources). You can choose yours or 'theirs' for every distinct change, and I'd recommend manually choosing for each of them - won't take long. Merge progress can be watched in the upper right corner. Once you have treated _all_ of the differences, a small notice will appear top center "All changes have been processed" - use the `save and..` link offered (wording differs depending on remaining work in other files).
 
+You're now back to your normal work environment - now ***T E S T*** your merge result! This is critical - if you did need to resolve conflicts, then that means you will need to test both whether your new features/fixes still work as before; and read their commit notes and test whether their new features/fixes _also_ work.
+
 Might add more details next time I experience it ([WIP](#wip)).
 
 
