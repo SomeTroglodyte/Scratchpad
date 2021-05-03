@@ -80,6 +80,23 @@ There's an IntelliJ [plugin for Markdown fom JetBrains](https://plugins.jetbrain
 
 A nice Markdown cheat sheet is [here](https://www.markdownguide.org/cheat-sheet) - though only 90% applies to files that will be rendered by github. Particularly, footnotes work differently.
 
+From time to time it can be useful to post large blocks of (code, savegames) without creating posts several pages long - this can be done with a 'spoiler' technique which unfortunately on github requires embedding html directly ([reference](https://stackoverflow.com/questions/32814161/how-to-make-spoiler-text-in-github-wiki-pages)):
+```html
+<details>
+  <summary>Visible clickable header not using markdown but html formatting</summary>
+
+Markdown - leave empty lines before/after
+
+</details>
+```
+Would look like this:
+<details>
+  <summary>Visible header not using markdown but html formatting</summary>
+
+Markdown - leave empty lines before/after
+
+</details>
+
 ### Initial Run Config
 Setting up the desktop run config depends a bit on the IDE knowing about the project contents, so it's best to wait a little after cloning until the initial automatic gradle *sync* has finished, which can take a quarter of an hour. Otherwise the dropdown for "use classpath" will not contain the desktop entry.
 
