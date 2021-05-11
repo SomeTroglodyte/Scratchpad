@@ -2,7 +2,7 @@
 * Yes/No boxes and keys Y, N, Enter
     * branch: [YesNoPopupKeys](https://github.com/SomeTroglodyte/Unciv/tree/YesNoPopupKeys)
     * Needs rethink: generic keyhandler for Popup class?
-* ~~World view - Keys: U = Overview units, C = Overview cities, T = Overview trades, R = Overview resources, V = Victory screen ~~
+* ~~World view - Keys: U = Overview units, C = Overview cities, T = Overview trades, R = Overview resources, V = Victory screen~~
 * Overview cities and units retain scroll position, ~~Overview itself retains selected tab~~ -> local branch
 * ~~Remap Improvement "R" key to railroad once researched~~
 * Mousewheel in mod manager
