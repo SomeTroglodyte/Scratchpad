@@ -1,24 +1,25 @@
 #### UI
-* Yes/No boxes and keys Y, N, Enter - i10n?
+* Yes/No boxes and keys Y, N, Enter
     * branch: [YesNoPopupKeys](https://github.com/SomeTroglodyte/Unciv/tree/YesNoPopupKeys)
     * Needs rethink: generic keyhandler for Popup class?
-* World view - Keys: U = Overview units, C = Overview cities, T = Overview trades, R = Overview resources, V = Victory screen
-* Overview cities and units retain scroll position, ?Overview itself retains selected tab?
-* Remap Improvement "R" key to railroad once researched
+* ~~World view - Keys: U = Overview units, C = Overview cities, T = Overview trades, R = Overview resources, V = Victory screen ~~
+* Overview cities and units retain scroll position, ~~Overview itself retains selected tab~~ -> local branch
+* ~~Remap Improvement "R" key to railroad once researched~~
 * Mousewheel in mod manager
-* F1 key to civilopedia
-    * branch: [LinkableCivilopedia1](https://github.com/SomeTroglodyte/Unciv/tree/LinkableCivilopedia1)
+* ~~F1 key to civilopedia~~
 * Do not offer Sleep until healed when healing==0 (marine -> `MapUnit.rankTileForHealing`)
-    * Check: Is Marine supply promotion Vanilla Civ5?
+    * Check: Is marine supply promotion Vanilla Civ5?
+* Popups with only a 'close' button dismissable with keyboard
+* Internationalization of keyboard shortcuts???
 
 #### Shortcuts
-* ~~Buying several tiles in city view (buy next ring?)~~
-* Buying buildings faster in city view (buy all affordable? buy queue?)
+* ~~Buying several tiles in city view (buy next ring?)~~ -> PR
+* Buying buildings faster in city view (buy all affordable? buy queue?) -> local branch
 * Global city construction changes (e.g. all science to gold) -> overview-cities
 * Upgrade all units command in overview-unit
 
 #### Debug
-* Incompatibility More luxuries mod + 5Hex tileset + experimental tile layering: coral+fisheries, barrier reef black
+* ~~Incompatibility More luxuries mod + 5Hex tileset + experimental tile layering: coral+fisheries, barrier reef black~~
 * ~~Pillage / rebuild "city center"~~
     * ~~seen tiles w/rebuildable center in enemy territory -> the AI does it too~~
     * ~~review what razing cities code does with improvements~~
@@ -44,6 +45,7 @@
     * Effect of roads/railroad
     * "Remove" actions
     * Great person improvements - "can only be built by"
+    * Nation display: Unique TileImprovement `terrainsCanBeBuiltOn` not displayed
 * new category UI help including screenshots of world view / city explaining parts
 
 #### Ideas
