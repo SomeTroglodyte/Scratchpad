@@ -97,6 +97,14 @@ Markdown - leave empty lines before/after
 
 </details>
 
+On footnotes - if you really need those you'd have to fake it using inline html like so:
+```html
+    Footnote reference in main body: <sup id="a1">[name](#f1)</sup>
+
+    Footnote definition below: <sup id="f1">name</sup> ...footnote text... [↩](#a1)
+```
+Just make sure to match up the id's (`a1`, `f1`) if you define several footnotes. Using `sup` to format both reference and definition marker is optional, `b` `i` or `span` work just as well.
+
 ### Initial Run Config
 Setting up the desktop run config depends a bit on the IDE knowing about the project contents, so it's best to wait a little after cloning until the initial automatic gradle *sync* has finished, which can take a quarter of an hour. Otherwise the dropdown for "use classpath" will not contain the desktop entry.
 
