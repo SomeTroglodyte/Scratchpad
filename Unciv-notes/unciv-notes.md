@@ -45,8 +45,11 @@
     * Effect of roads/railroad
     * "Remove" actions
     * Great person improvements - "can only be built by"
-    * Nation display: Unique TileImprovement `terrainsCanBeBuiltOn` not displayed
+* Nation display: Unique TileImprovement `terrainsCanBeBuiltOn` not displayed
+* Nation display: LeaderPortrait
 * new category UI help including screenshots of world view / city explaining parts
+* Entry for "Terrain" rivers?
+* Terrain image creation is standalone but MapEditorOptionsTable uses the same code distributed over addTerrainOptions loop head and makeTileGroup
 
 #### Ideas
 * Workable city radius moddable (hardcoded to 3 in CityInfo.setTransients)
