@@ -55,3 +55,4 @@
 
 #### Ideas
 * Workable city radius moddable (hardcoded to 3 in CityInfo.setTransients)
+* Some more statistics like %world explored, avg battles per turn worldwide, % of worldwide battles participated in, %of battles won/lost/survived, +/- units captured,...
