@@ -1,7 +1,8 @@
 #### UI
 * Yes/No boxes and keys Y, N, Enter
-    * branch: [YesNoPopupKeys](https://github.com/SomeTroglodyte/Unciv/tree/YesNoPopupKeys)
-    * Needs rethink: generic keyhandler for Popup class?
+    * ~~branch: [YesNoPopupKeys](https://github.com/SomeTroglodyte/Unciv/tree/YesNoPopupKeys)~~
+    * ~~Needs rethink: generic keyhandler for Popup class?~~
+    * local branch ready
 * ~~World view - Keys: U = Overview units, C = Overview cities, T = Overview trades, R = Overview resources, V = Victory screen~~
 * Overview cities and units retain scroll position, ~~Overview itself retains selected tab~~ -> local branch
 * ~~Remap Improvement "R" key to railroad once researched~~
@@ -10,6 +11,7 @@
 * Do not offer Sleep until healed when healing==0 (marine -> `MapUnit.rankTileForHealing`)
     * Check: Is marine supply promotion Vanilla Civ5?
 * Popups with only a 'close' button dismissable with keyboard
+* Wrapper class for Popups with only text and one or two buttons: "InfoPopup"
 * Internationalization of keyboard shortcuts???
 
 #### Shortcuts
