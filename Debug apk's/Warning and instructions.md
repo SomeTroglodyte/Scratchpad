@@ -5,6 +5,7 @@
 - Since they are unsuitable as updates the only way to install them when Unciv is already installed is to normally uninstall Unciv first
 - Same applies when you want to switch from a debug build back to store-supplied Unciv
 - Uninstall means data loss - settings, saves, maps, mods.
+- Do not share links, they will disappear soon enough
 
 ## Instructions
 - If you want to keep all Unciv data, use your rooted file manager - if you're rooted you should know where to look - and back them up
@@ -13,3 +14,7 @@
 - Enable external sources if you haven't already - on earlier Android versions this was a global setting, now it is per app - I'd suggest enabling this for your preferred file manager only.
 - Install one of these apks by launching them - if Android asks associate them with the stock package manager
 - test
+
+## Known issues
+- Unciv-debug-Civilopedia-Flavour-001.apk is missing the updated atlas files -> white square instead of "link" icon
+- Unciv-debug-Civilopedia-Flavour-001.apk is quite outdated compared to local branch
