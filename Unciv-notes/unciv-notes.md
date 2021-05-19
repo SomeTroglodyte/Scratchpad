@@ -13,6 +13,7 @@
 * Popups with only a 'close' button dismissable with keyboard
 * Wrapper class for Popups with only text and one or two buttons: "InfoPopup"
 * Internationalization of keyboard shortcuts???
+* Help in the Improvement Picker: 'research X to enable Y'
 
 #### Shortcuts
 * ~~Buying several tiles in city view (buy next ring?)~~ -> PR
@@ -27,29 +28,31 @@
     * ~~review what razing cities code does with improvements~~
 * ~~review what razing cities code does with tile ownership - transfer tiles in 5t zone of another city to that city? Even if not connected to tiles already owned by that city? Citadels? Need to know original Civ5 behaviour~~
 * Multiturn movement ETA off, or circles promising tiles reachable this turn that aren't (rivers? cannot be only trigger)
+* Connect to capital / rivers / engineering not researched
+* Legalism + captured cities / rebellion: I still think this is wrong as it is now, and it forces unintentionally to choose a construction for cities that do not construct
 
 #### Try
 * ~~Higher resolution option - 1800 looks good on a 2.5k 32" panel, but not much better than 1500. 2400 looks worse.~~
 
 #### Civilopedia
-* "Link right half" - make it callable to preselect a specific entry
-    * branch: [LinkableCivilopedia1](https://github.com/SomeTroglodyte/Unciv/tree/LinkableCivilopedia1)
-* "Link left half" - system to make partial text selectable
-* "Internal Link generation" - criteria? Some extra metadata needed?
-    * Only way I see: Find unused bracket pair, *declare* as containing category:entry for civilopedia
-    * Make toLabel remove the marker and generate an onClick instead
-    * Modify known/linkworthy multiline labels to split and convert to multi-label table
-* "External links" - e.g. world view bottom right: terrain, resource, improvement, unit?
-    * TileInfoTable (right just above minimap) - gets text from tile.toString so it's no easier than internal links
-* System to include extra text for hardcoded stuff:
+* branch: [Civilopedia-Flavour](https://github.com/SomeTroglodyte/Unciv/tree/Civilopedia-Flavour)
+* ~~"Link right half" - make it callable to preselect a specific entry~~
+* ~~"Link left half" - system to make partial text selectable~~
+* ~~"Internal Link generation" - criteria? Some extra metadata needed?~~
+    * ~~Only way I see: Find unused bracket pair, *declare* as containing category:entry for civilopedia~~
+    * ~~Make toLabel remove the marker and generate an onClick instead~~
+    * ~~Modify known/linkworthy multiline labels to split and convert to multi-label table~~
+* ~~"External links" - e.g. world view bottom right: terrain, resource, improvement, unit?~~
+    * ~~TileInfoTable (right just above minimap) - gets text from tile.toString so it's no easier than internal links~~
+* ~~System to include extra text for hardcoded stuff:~~
     * ~~Citadel limitation 'within or next to own borders'~~ - no longer an example
     * A/C ruins, city center, barbarians
     * Effect of roads/railroad
     * "Remove" actions
-    * Great person improvements - "can only be built by"
-* Nation display: Unique TileImprovement `terrainsCanBeBuiltOn` not displayed
-* Nation display: LeaderPortrait
-* new category UI help including screenshots of world view / city explaining parts
+    * ~~Great person improvements - "can only be built by"~~
+* ~~Nation display: Unique TileImprovement `terrainsCanBeBuiltOn` not displayed~~
+* ~~Nation display: LeaderPortrait~~
+* ~~new category UI help including screenshots of world view / city explaining parts~~
 * Entry for "Terrain" rivers?
 * Terrain image creation is standalone but MapEditorOptionsTable uses the same code distributed over addTerrainOptions loop head and makeTileGroup
 
