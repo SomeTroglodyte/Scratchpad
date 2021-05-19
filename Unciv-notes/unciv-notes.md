@@ -14,6 +14,7 @@
 * Wrapper class for Popups with only text and one or two buttons: "InfoPopup"
 * Internationalization of keyboard shortcuts???
 * Help in the Improvement Picker: 'research X to enable Y'
+* Finally check when and how map generation choices are persisted and when not
 
 #### Shortcuts
 * ~~Buying several tiles in city view (buy next ring?)~~ -> PR
