@@ -10,3 +10,10 @@ In such cases, please double check the qualifiers of the possibly long list of o
 Warnings are a complex subject matter, here I'll just note this: The correct @Suppress annotation _is_ offered in quick-fixes by 
 Android Studio, but on the second level. Even if the only menu entry says `delete` - open the little trangle.
 
+## Kdoc
+I've gradually come to the resolution that all public classes, properties and methods I create (or modify and understand) get complete documentation on the `/** .. */` format - this results in very helpful tooltips everywhere these elements are used. You can see them immediately (unless your indexer is way behind).
+
+The reference is [here](https://kotlinlang.org/docs/kotlin-doc.html).
+
+A not-quite-obvious trick: To link to something not known in the current file use the full path including package:
+`[OptionsPopup]` would not work if not imported, `[com.unciv.ui.worldscreen.mainmenu.OptionsPopup]` would, but `[OptionsPopup][com.unciv.ui.worldscreen.mainmenu.OptionsPopup]` gives the friendliest result.
