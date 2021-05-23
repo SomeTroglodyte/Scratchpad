@@ -30,7 +30,9 @@
 * ~~review what razing cities code does with tile ownership - transfer tiles in 5t zone of another city to that city? Even if not connected to tiles already owned by that city? Citadels? Need to know original Civ5 behaviour~~
 * Multiturn movement ETA off, or circles promising tiles reachable this turn that aren't (rivers? cannot be only trigger)
 * Connect to capital / rivers / engineering not researched
-* Legalism + captured cities / rebellion: I still think this is wrong as it is now, and it forces unintentionally to choose a construction for cities that do not construct
+* Legalism + captured cities / rebellion: I still think this is wrong as it is now, and it forces unintentionally to choose a construction for cities that do not construct (rebelling city gets automatic construction, then the same building is built by legalism, then the queue is empty, user is forced to choose despice city crippled)
+* Will stealing resource tile through citadel update stats?
+* Worker automation -threat model. City bombard, enemy territory, can be attacked (evaluates what the worker can reach, not which enemies can reach the worker)
 
 #### Try
 * ~~Higher resolution option - 1800 looks good on a 2.5k 32" panel, but not much better than 1500. 2400 looks worse.~~
@@ -60,3 +62,5 @@
 #### Ideas
 * Workable city radius moddable (hardcoded to 3 in CityInfo.setTransients)
 * Some more statistics like %world explored, avg battles per turn worldwide, % of worldwide battles participated in, %of battles won/lost/survived, +/- units captured,...
+* Notifications showing locations - some could show more (attacked by, city growth,...?)
+
