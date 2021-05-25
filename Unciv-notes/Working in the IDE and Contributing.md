@@ -31,7 +31,7 @@ So the goal now is to get that yellow tag to the top and the corresponding code 
 
 Now your local master branch is up to date, but the online copy "origin/master" is not yet, as you can see by the position of its purple tag.
 
-* Do a push from your local master to the online master: `VCS->Git->Push` or `Ctrl-Shift-K`, make sure you're pushing `master→origin:master` and go. Note this is different from the pushes you to to prepare a PR - this is master to master, those are specific branch to online copy of specific branch. Note how your little purple tag symbol has moved.
+* Do a push from your local master to the online master: `VCS->Git->Push` or `Ctrl-Shift-K`, make sure you're pushing `master→origin:master` and go. Note this is different from the pushes you do to prepare a PR - this is master to master, those are specific branch to online copy of specific branch. Note how your little purple tag symbol has moved.
 
 I did an explicit check on the online fork at this point. Pushing your own contributions will pop a yellow background menu offering to create a PR as soon as you browse to your fork, but this updated-local-master -> online master push did not. Which is as it should be.
 
