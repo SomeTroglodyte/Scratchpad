@@ -50,6 +50,15 @@ You're now back to your normal work environment - now ***T E S T*** your merge r
 
 Might add more details next time I experience it ([WIP](#wip)).
 
+### Testing another collaborator's work
+You see a PR aud want to test it? Actually, you can test any branch of any Unciv fork because the 'public' property is inherited. So all that is requierd is that the author pushed something he thinks works.
+- Look up the repo in question, e.g. https://github.com/xxxxxx/Unciv, and get the 'clone' https link: Drop down the code menu, make sure the https tab is selected, copy the link. Nowadays it's identical to the above, but that has changed and may again.
+- Go to VCS-git-remotes like described above (under "Keeping your fork up to date") and enter the link.
+- Do a Git fetch and wait a short while. The repo's branches should appear in your branch manager.
+- Check out your `master` - or make sure your local changes are empty using any other method, like looking in the git log.
+- Check out the branch in question directly like any other unless it is named idetically to one of yours - e.g. they developed in `master`.
+- If there is a branch name conflict, use the "New branch from selected..." entry from the context menu, right under checkout.
+- Start the debugger and test away!
 
 ### WIP
 * **Work in Progress**
