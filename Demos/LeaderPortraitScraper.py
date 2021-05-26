@@ -43,6 +43,11 @@ def leaderPage(name, href, path):
 				file.write(pic)
 			print (f"        {name}.png: {len(pic)} byte")
 
+def pngRename(path,old,new):
+	pathOld = os.path.join(path,old+'.png')
+	pathNew = os.path.join(path,new+'.png')
+	os.rename(pathOld,pathNew)
+	
 def main():
 	code, data, msg = download(leaderListUrl)
 	if code != 200:
@@ -69,8 +74,14 @@ def main():
 		print (f"    {name} ({civ}) ({category})")
 		
 		leaderPage(name, href, path)
+		
+	pngRename(path,'Washington','George Washington')
+	pngRename(path,'Bismarck', 'Otto von Bismarck')
+	pngRename(path,'Suleiman', 'Suleiman I')
+	pngRename(path,'Kamehameha', 'Kamehameha I')
+	pngRename(path,'Montezuma', 'Montezuma I')
+
 	print (f"All done, {path} is ready.")
 	return
 
 main()
-
