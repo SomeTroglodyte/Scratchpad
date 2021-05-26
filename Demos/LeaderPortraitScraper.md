@@ -7,3 +7,4 @@ Caveats:
 - Needs python3
 - You might need to `pip install cssselect` and/or lxml
 - Pulls non-vanilla leaders too - you could filter on the `category` variable if you think that a problem
+- Needs to be run under desktop once to build the atlas
