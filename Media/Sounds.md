@@ -9,3 +9,5 @@ Sources:
 slider is an attenuated version of Woosh with edded echo.
 nuke is Tornado-Siren-II, shortened to two or three siren cycles, "Adjustable Fade"(S-Curve Up, Rounded In), attenuated 7.5dB, then Explosion-Ultra-Bass pasted in the middle of the last siren cycle.
 nuke-minimal is just Explosion-Ultra-Bass shortened and exported to 44kbps mono
+
+All modifications done with [Audacity](https://www.audacityteam.org/).
