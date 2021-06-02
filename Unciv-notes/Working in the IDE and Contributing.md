@@ -61,7 +61,7 @@ You see a PR aud want to test it? Actually, you can test any branch of any Unciv
 - Start the debugger and test away!
 
 ### Run Unciv unit tests
-<sub>(thanks to </sub>@xlenstra<sub> for helping me create this chapter)</sub>
+<sub>(thanks to <a href="https://github.com/xlenstra">@xlenstra</a> for helping me create this chapter)</sub>
 - Edit run configurations as you did for your 'desktop' run config. Use Run / Edit Configurations or the dropdown where the existing ones are.
 - Templates -> Android JUnit, top right -> Create configuration
 - Give it a nice name, e.g. 'Unciv Unit Tests'
