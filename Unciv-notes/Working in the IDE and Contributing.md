@@ -60,6 +60,16 @@ You see a PR aud want to test it? Actually, you can test any branch of any Unciv
 - If there is a branch name conflict, use the "New branch from selected..." entry from the context menu, right under checkout.
 - Start the debugger and test away!
 
+### Run Unciv unit tests
+- Edit run configurations as you did for your 'desktop' run config. Use Run / Edit Configurations or the dropdown where the existing ones are.
+- Templates -> Android JUnit, top right -> Create configuration
+- Give it a nice name, e.g. 'Unciv Unit Tests'
+- Set 'Use classpath of module' to Unciv.tests
+- Set the working directory just as you did for the debug config. This is important, as tests cover the ruleset and translations.
+- Set 'Test kind' 'to all in package', package = 'com.unciv.testing', Search: In single module
+- Save the config.
+- That's it! You can now run it or even debug the tests with breakpoints and everything.
+
 ### WIP
 * **Work in Progress**
 
