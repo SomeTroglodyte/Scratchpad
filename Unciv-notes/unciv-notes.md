@@ -64,3 +64,24 @@
 * Some more statistics like %world explored, avg battles per turn worldwide, % of worldwide battles participated in, %of battles won/lost/survived, +/- units captured,...
 * Notifications showing locations - some could show more (attacked by, city growth,...?)
 
+#### Sounds
+Science Victory
+	https://freesound.org/people/BaDoink/sounds/544385/
+Culture Victory
+	https://freesound.org/people/Tedski/sounds/434629/
+Domination Victory
+	https://freesound.org/people/womb_affliction/sounds/330706/
+Wonder built
+	https://freesound.org/people/jayfrosting/sounds/333398/
+Golden Age
+	https://freesound.org/people/tim.kahn/sounds/337000/
+	https://freesound.org/people/AlaskaRobotics/sounds/221568/
+	
+https://freesound.org/people/Maxim_nick/sounds/553723/
+https://freesound.org/people/klankbeeld/sounds/578272/
+https://freesound.org/people/ScreamStudio/sounds/392617/
+https://freesound.org/people/ScreamStudio/sounds/432090/
+
+Death Robot
+	https://freesound.org/people/vultraz168/sounds/334660/
+	https://freesound.org/people/michalwa2003/sounds/419591/
