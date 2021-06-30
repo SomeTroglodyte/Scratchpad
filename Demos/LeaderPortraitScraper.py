@@ -80,6 +80,7 @@ def main():
 	pngRename(path,'Suleiman', 'Suleiman I')
 	pngRename(path,'Kamehameha', 'Kamehameha I')
 	pngRename(path,'Montezuma', 'Montezuma I')
+	pngRename(path,'Attila', 'Attila the Hun')
 
 	print (f"All done, {path} is ready.")
 	return
