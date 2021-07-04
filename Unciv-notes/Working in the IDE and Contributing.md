@@ -44,14 +44,22 @@ If your proposed contribution works and you have tested it, but have not recentl
 * Make sure your local master is still active/current (has the tag not the star, has no checkout in its context menu)
 * From the git pane's branch tree or the branches popup, right click *on your new branch* and do a `Checkout and rebase onto current`. No messages or popups means your changes were compatible with all the commits you just moved forward (inluded in the base of your branch by rebasing), and you could go ahead and push the branch to your fork and go there to make a PR out of it. 
 
-If merging needs action, the IDE will tell you so and guide you - the "Conflicts" window pops up. I suggest ignoring the two buttons "Accept Yours/Theirs", use "Merge". This will pop up a diff for the selected file comparing your source code with your master (now in sync with the current upstream sources). You can choose yours or 'theirs' for every distinct change, and I'd recommend manually choosing for each of them - won't take long. Merge progress can be watched in the upper right corner. Once you have treated _all_ of the differences, a small notice will appear top center "All changes have been processed" - use the `save and..` link offered (wording differs depending on remaining work in other files).
+If merging needs action, the IDE will tell you so and guide you - the "Conflicts" window pops up. I suggest ignoring the two buttons "Accept Yours/Theirs", use "Merge" (unless it's a binary file or an atlas). This will pop up a diff for the selected file comparing your source code with your master (now in sync with the current upstream sources). You can choose yours or 'theirs' for every distinct change, and I'd recommend manually choosing for each of them - won't take long. Merge progress can be watched in the upper right corner. Once you have treated _all_ of the differences, a small notice will appear top center "All changes have been processed" - use the `save and..` link offered (wording differs depending on remaining work in other files).
 
 You're now back to your normal work environment - now ***T E S T*** your merge result! This is critical - if you did need to resolve conflicts, then that means you will need to test both whether your new features/fixes still work as before; and read their commit notes and test whether their new features/fixes _also_ work.
 
 Might add more details next time I experience it ([WIP](#wip)).
 
+### Bringing a branch that already has a PR up to date
+- Commit any recent changes of your local branch and push them. Several unpushed commits can be squashed, but do not use amend or squash with anything already pushed (squash is easiest from git history, don't forget to select your branch there).
+- Check out master and update normally, including pushing it to your origin/master.
+- Check out the work branch again
+- In branch manager, use your `master` branch context menu, choose 'Merge into current'. Resolve conflicts - if in doubt or you know that you will have to redo the file anyway, choose 'Accept theirs' (e.g. for an atlas with its png - don't forget to regenerate those if they were the cause of a merge conflict).
+- Push. The commit list and file diff shown by Android Studio will display stuff that isn't yours and which you do not want to be part of the PR, but so so anyway. Go to your PR on the web an check that those foreign changes are not displayed.
+- Success!
+
 ### Testing another collaborator's work
-You see a PR aud want to test it? Actually, you can test any branch of any Unciv fork because the 'public' property is inherited. So all that is requierd is that the author pushed something he thinks works.
+You see a PR and want to test it? Actually, you can test _any_ branch of _any_ Unciv fork because the 'public' property is inherited. So all that is required is that the author pushed something he thinks works.
 - Look up the repo in question, e.g. https://github.com/xxxxxx/Unciv, and get the 'clone' https link: Drop down the code menu, make sure the https tab is selected, copy the link. This may be identical to the repo link or end in '.git', whichever it is, take it as is.
 - Go to VCS-git-remotes like described above (under "[Keeping your fork up to date](#keeping-your-fork-up-to-date)") and enter the link.
 - Do a Git fetch and wait a short while. The other repo's branches should appear in your branch manager.
