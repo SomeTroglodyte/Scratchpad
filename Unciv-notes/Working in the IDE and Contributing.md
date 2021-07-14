@@ -79,6 +79,18 @@ You see a PR and want to test it? Actually, you can test _any_ branch of _any_ U
 - Save the config.
 - That's it! You can now run it or even debug the tests with breakpoints and everything.
 
+### Getting a *jar* from your branch
+- Checkout the branch, verify it runs fine in the debugger.
+- Open the terminal pane (little tab bottom left), `./gradlew desktop:dist` like described [here](https://github.com/yairm210/Unciv/wiki/Building-locally-without-Android-Studio).
+- Look under ./desktop/build/libs (that terminal starts out in your project root) for the jar.
+- I suggest you rename it to `Unciv-yourgithubname-branchname.jar` if you want to keep it or show it to someone.
+
+### Getting a debug *apk* from your branch
+- Checkout the branch, verify it runs fine in the debugger.
+- Menu: Build - Build Bundle(s) / APK(s) -> Build APK(s)
+- Look in event log for the 'locate' link or under ./android/build/outputs/apk/debug for your apk.
+- I suggest you rename it to `Unciv-yourgithubname-branchname-debug.apk` if you want to keep it or show it to someone.
+
 ### WIP
 * **Work in Progress**
 
