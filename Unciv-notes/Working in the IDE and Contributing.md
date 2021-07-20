@@ -75,7 +75,7 @@ You see a PR and want to test it? Actually, you can test _any_ branch of _any_ U
 - Give it a nice name, e.g. 'Unciv Unit Tests'
 - Set 'Use classpath of module' to Unciv.tests
 - Set the working directory just as you did for the debug config. This is important, as tests cover the ruleset and translations.
-- Set 'Test kind' 'to all in package', package = 'com.unciv.testing', Search: In single module
+- Set 'Test kind' 'to all in directory', directory = 'tests/src/com/unciv' relative to your clone's root - use the picker to make this path absolute.
 - Save the config.
 - That's it! You can now run it or even debug the tests with breakpoints and everything.
 
