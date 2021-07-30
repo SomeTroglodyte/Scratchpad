@@ -71,11 +71,21 @@ You see a PR and want to test it? Actually, you can test _any_ branch of _any_ U
 ### Run Unciv unit tests
 <sub>(thanks to <a href="https://github.com/xlenstra">@xlenstra</a> for helping me create this chapter)</sub>
 - Edit run configurations as you did for your 'desktop' run config. Use Run / Edit Configurations or the dropdown where the existing ones are.
+- Templates -> Gradle, top right -> Create configuration
+- Give it a nice name, e.g. 'Unciv Unit Tests'
+- Set 'Gradle project:' to 'Unciv'
+- Set 'Tasks:' to ':tests:test'
+- Set 'Arguments:' to `--tests "com.unciv.testing.*"`
+- Save the config.
+- That's it! You can now run it or even debug the tests with breakpoints and everything.
+
+#### Run Unciv unit tests under JUnit (Android Studio 4.2.* or older)
+- Edit run configurations as you did for your 'desktop' run config. Use Run / Edit Configurations or the dropdown where the existing ones are.
 - Templates -> Android JUnit, top right -> Create configuration
 - Give it a nice name, e.g. 'Unciv Unit Tests'
-- Set 'Use classpath of module' to Unciv.tests
+- Set 'Use classpath of module' to 'Unciv.tests'
 - Set the working directory just as you did for the debug config. This is important, as tests cover the ruleset and translations.
-- Set 'Test kind' 'to all in directory', directory = 'tests/src/com/unciv' relative to your clone's root - use the picker to make this path absolute.
+- Set 'Test kind' to 'all in directory', directory = 'tests/src/com/unciv' relative to your clone's root - use the picker to make this path absolute.
 - Save the config.
 - That's it! You can now run it or even debug the tests with breakpoints and everything.
 
