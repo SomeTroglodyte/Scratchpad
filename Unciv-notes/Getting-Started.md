@@ -105,19 +105,26 @@ On footnotes - if you really need those you'd have to fake it using inline html 
 ```
 Just make sure to match up the id's (`a1`, `f1`) if you define several footnotes. Using `sup` to format both reference and definition marker is optional, `b` `i` or `span` work just as well.
 
+### Avoid pushing private changes, texture updates
+You _don't_ want to include your testing data - mods, saved games, settings, etc. in your pushes. `.gitignore` helps with that, but Android Studio interprets that loosely, meaning clicking a wrong checkbox can include such files anyway.
+
+Also, changes to `.gitignore` itself would normally be part of a commit - but `.git/info/exclude` would not. Therefore - use the former only if you want the change to affect the whole team, and wrap the change in its own PR and explain why the exclusion is good for all. All other ignores should go to `.git/info/exclude`.
+
+Another factor: git branch checkouts will update file timestamps, so an Unciv run might decide to re-pack textures and build new atlas files, even if you didn't actually add graphics. Care shoud be taken only actual content affecting atlas / texture png changes are pushed. Inversely, you need to take care that texture packs _are_ run when needed and the result included in pushes - if the folder structure changes, or you copy or move files without them getting fresh timestamps. In such cases, delete the atlas file to force a re-pack and run Unciv once.
+
 ### Initial Run Config
 Setting up the desktop run config depends a bit on the IDE knowing about the project contents, so it's best to wait a little after cloning until the initial automatic gradle *sync* has finished, which can take a quarter of an hour. Otherwise the dropdown for "use classpath" will not contain the desktop entry.
 
-The existing [Getting-Started](https://github.com/yairm210/Unciv/wiki/Getting-Started) says to "set <repo_folder>\android\assets\ as the Working directory", but I prefer a slight modification.
+The existing [Getting-Started](https://github.com/yairm210/Unciv/wiki/Getting-Started) says to "set <repo_folder>\android\assets\ as the Working directory", but I prefer a slight modification, see above.
 
 *Outside* the folder which the IDE sees as the mirror of your fork, say that is `~/Development/foo/bar/Unciv`, create a parallel one for use as Working directory, which might be `~/Development/foo/bar/Unciv.workdir`, and set that in your desktop run config. Then link some subfolders from the mentioned assets folder and copy the textures as follows:
 ```bash
 # cd to your new empty working folder (or use the open in terminal feature of your file manager)
 ln -s ../Unciv/android/assets/ExtraImages
 ln -s ../Unciv/android/assets/jsons
-ln -s ../Unciv/android/assets/skin
 ln -s ../Unciv/android/assets/sounds
 cp ../Unciv/android/assets/*.atlas .
 cp ../Unciv/android/assets/*.png .
 ```
-This means data added due to playtesting will not affect commits and you can test with mods without them appearing in Android Studio, no need to fiddle with exlusions and making sure the exclusion list does not end up in a commit - except if you use the "generate translation files" button. Caveat: If your proposed change actually needs to change the atlas/texture files that should be part of a release, you'll have to copy them back manually.
+(This is not necessarily complete - I also set up links for Image folders and other stuff - this is a _guideline_ only)
+This means data added due to playtesting ***cannot*** affect commits and you can test with mods without them appearing in Android Studio, no need to fiddle with exlusions and making sure the exclusion list does not end up in a commit - except if you use the "generate translation files" button. Caveat: If your proposed change actually needs to change the atlas/texture files that should be part of a release, you'll _have_ to copy them back manually.
