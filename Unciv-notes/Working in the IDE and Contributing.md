@@ -92,6 +92,8 @@ You see a PR and want to test it? Actually, you can test _any_ branch of _any_ U
 ### Getting a *jar* from your branch
 - Checkout the branch, verify it runs fine in the debugger.
 - Open the terminal pane (little tab bottom left), `./gradlew desktop:dist` like described [here](https://github.com/yairm210/Unciv/wiki/Building-locally-without-Android-Studio).
+    - terminal gradlew does not automatically use the same Java JRE as Studio-run Gradle. You may need to set JAVA_HOME (`export`).
+    - On windows I use: `set "JAVA_HOME=C:\Program Files\Android\Android Studio\jre" & gradlew desktop:dist` - the box has _no_ system-wide Java.
 - Look under ./desktop/build/libs (that terminal starts out in your project root) for the jar.
 - I suggest you rename it to `Unciv-yourgithubname-branchname.jar` if you want to keep it or show it to someone.
 
