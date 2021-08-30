@@ -1,5 +1,9 @@
 Follow Yair's guidelines, of course - but this file is for specific things I stumbled upon.
 
+## Style Reference
+https://kotlinlang.org/docs/coding-conventions.html
+***Do*** try to read it some time. But don't take it [too](https://github.com/raywenderlich/kotlin-style-guide#smiley-face) seriously. The goal is - minimize time the rest of the team needs to read and understand your code. Consistency is good _because_ it promotes readability.
+
 ## IDE automatical or semi-automatical import directives
 Sometimes you use a class for the first time in a source file - e.g. something used only a few Gdx `Table`s
 and now you want to pass a reference as generic `Actor` - you type it and it is colored red, the quick-fix offers to import it for you.
@@ -8,7 +12,10 @@ In such cases, please double check the qualifiers of the possibly long list of o
 
 ## Suppressing warnings
 Warnings are a complex subject matter, here I'll just note this: The correct @Suppress annotation _is_ offered in quick-fixes by 
-Android Studio, but on the second level. Even if the only menu entry says `delete` - open the little trangle.
+Android Studio, but on the second level. Even if the only menu entry says `delete` - open the little triangle.
+
+THE definitive reference on warnings and possible @Suppress names is:
+https://github.com/JetBrains/kotlin/blob/master/compiler/frontend/src/org/jetbrains/kotlin/diagnostics/rendering/DefaultErrorMessages.java
 
 ## Kdoc
 I've gradually come to the resolution that all public classes, properties and methods I create (or modify and understand) get complete documentation on the `/** .. */` format - this results in very helpful tooltips everywhere these elements are used. You can see them immediately (unless your indexer is way behind).
