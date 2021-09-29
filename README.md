@@ -10,5 +10,6 @@ Documents potentially helpful to Contributors and my own todo/ideas list
 ***Do*** read [Warning and instructions](https://github.com/SomeTroglodyte/Scratchpad/blob/master/Debug%20apk's/Warning%20and%20instructions.md)
 
 ### Demos
-- [LeaderPortraitScraper](https://github.com/SomeTroglodyte/Scratchpad/blob/2b45310c74b7a405b8b15789664cd06b73a38575/Demos/LeaderPortraitScraper.md)
-- SAF Demo: outdated
+- [LeaderPortraitScraper](https://github.com/SomeTroglodyte/Scratchpad/blob/master/Demos/LeaderPortraitScraper.md)
+- [GeoffKnorrMusicScraper](https://github.com/SomeTroglodyte/Scratchpad/blob/master/Demos/GeoffKnorrMusicScraper.md)
+Both create mods from public resources for personal use (those resources are not under an open license, so scraping them yourself for personal use is OK, but redistributing the completed mod is not)
