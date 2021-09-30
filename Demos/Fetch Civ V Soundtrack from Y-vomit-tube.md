@@ -32,3 +32,5 @@ Missing:
 * Babylon, Egypt Peace, Korea, Siam, Denmark, Austria - not found
 * Polynesia (available via [GeoffKnorrMusicScraper.py](./GeoffKnorrMusicScraper.py) - these files are preferrable anyway)
 * Byzantium, Carthage, Inca, Mongolia, Spain, Sweden, The Huns, The Netherlands, The Ottomans - same as Polynesia
+
+Track boundaries are as displayed by the source, and as such only have full second resolution. So track beginnings and ends may be off, and if I find any bad case I'll maybe update the cue file.
