@@ -19,7 +19,7 @@ Fetch "Civ V Soundtrack.cue" from here and place it into the same directory.
 ## Convert to uncompressed
 Rename the downloaded y💩be sound file to "Civ V Soundtrack.mp4"
 
-`ffmpeg -hide_banner -i "Civ V Soundtrack.mp4" -y -vn -metadata creation_time= -metadata compatible_brands= -metadata major_brand= -metadata minor_version= -metadata comment="Civ V Soundtrack" -metadata:s:a:0 handler_name= -metadata:s:a:0 creation_time= "Civ V Soundtrack.flac"`
+`ffmpeg -hide_banner -i "Civ V Soundtrack.mp4" -y -vn -metadata creation_time= -metadata compatible_brands= -metadata major_brand= -metadata minor_version= -metadata comment="Civ V Soundtrack" -metadata:s:a:0 handler_name= -metadata:s:a:0 creation_time= "Civ V Soundtrack.wav"`
 
 ## Split tracks and convert to playable by Unciv
 `shnsplit -f "Civ V Soundtrack.cue" -t "%t" -o "cust ext=ogg oggenc -b 128 -o %f -" "Civ V Soundtrack.wav" ;`
