@@ -25,4 +25,4 @@ Rename the downloaded y💩be sound file to "Civ V Soundtrack.mp4"
 `shnsplit -f "Civ V Soundtrack.cue" -t "%t" -o "cust ext=ogg oggenc -b 128 -o %f -" "Civ V Soundtrack.wav" ;`
 
 ## Deploy
-Just create an appropriately named subfolder under your mods folder and place all .ogg files in there, clean up, and go and mark that mod as permanent audiovisual in Unciv.
+Just create an appropriately named subfolder under your mods folder, a 'music' folder under that, and place all .ogg files in there, clean up, and go and mark that mod as permanent audiovisual in Unciv.
