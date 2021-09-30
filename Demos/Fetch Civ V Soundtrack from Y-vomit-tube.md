@@ -26,3 +26,9 @@ Rename the downloaded y💩be sound file to "Civ V Soundtrack.mp4"
 
 ## Deploy
 Just create an appropriately named subfolder under your mods folder, a 'music' folder under that, and place all .ogg files in there, clean up, and go and mark that mod as permanent audiovisual in Unciv.
+
+## Notes
+Missing:
+* Babylon, Egypt Peace, Korea - not found
+* Polynesia (available via [GeoffKnorrMusicScraper.py](./GeoffKnorrMusicScraper.py) - these files are preferrable anyway)
+* Spain, Sweden, The Huns, The Netherlands, The Ottomans - same as Polynesia
