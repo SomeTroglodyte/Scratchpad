@@ -29,6 +29,6 @@ Just create an appropriately named subfolder under your mods folder, a 'music' f
 
 ## Notes
 Missing:
-* Babylon, Egypt Peace, Korea - not found
+* Babylon, Egypt Peace, Korea, Siam, Denmark, Austria - not found
 * Polynesia (available via [GeoffKnorrMusicScraper.py](./GeoffKnorrMusicScraper.py) - these files are preferrable anyway)
-* Spain, Sweden, The Huns, The Netherlands, The Ottomans - same as Polynesia
+* Byzantium, Carthage, Inca, Mongolia, Spain, Sweden, The Huns, The Netherlands, The Ottomans - same as Polynesia
