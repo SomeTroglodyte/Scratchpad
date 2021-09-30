@@ -4,8 +4,8 @@ A 'scraper' pulling all music tracks available on the composer's website, and re
 - [G&K soundtrack](https://www.geoffknorr.com/civvgodsandkings)
 
 Instructions:
-- `chmod 775 LeaderPortraitScraper.py`
-- `./LeaderPortraitScraper.py`
+- `chmod 775 GeoffKnorrMusicScraper.py`
+- `./GeoffKnorrMusicScraper.py`
 - If you get an http 429 error (limited by server), just try again after a pause. The script will skip already downloaded tracks.
 - move the generated mod's folder to your assets and activate as permanent audiovisual mod in the mod manager
 
