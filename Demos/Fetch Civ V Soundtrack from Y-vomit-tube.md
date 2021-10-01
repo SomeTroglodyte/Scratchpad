@@ -30,6 +30,7 @@ Just create an appropriately named subfolder under your mods folder, a 'music' f
 ## Notes
 Missing:
 * Babylon, Egypt Peace, Korea, Siam, Denmark, Austria - not found
+* Candidates to replace the above: [Korea - Arirang - Theme](https://en.wikipedia.org/wiki/File:Arirang_(USAS).ogg), [Denmark - Drömde mig en dröm - Theme](https://en.wikipedia.org/wiki/File:Dr%C3%B6mde_mig_en_dr%C3%B6m.ogg), [Austria - Recordare - Peace](https://en.wikipedia.org/wiki/File:W._A._Mozart_-_Requiem,_K._626_(Bruno_Walter,_Wiener_Philharmoniker,_Wiener_Staatsopernchor,_1956)_-_06._Recordare.ogg), [Austria - Dies Irae - War](https://en.wikipedia.org/wiki/File:W._A._Mozart_-_Requiem,_K._626_(Bruno_Walter,_Wiener_Philharmoniker,_Wiener_Staatsopernchor,_1956)_-_03._Dies_irae.ogg) 
 * Polynesia (available via [GeoffKnorrMusicScraper.py](./GeoffKnorrMusicScraper.py) - these files are preferrable anyway)
 * Byzantium, Carthage, Inca, Mongolia, Spain, Sweden, The Huns, The Netherlands, The Ottomans - same as Polynesia
 
