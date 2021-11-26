@@ -89,6 +89,16 @@ You see a PR and want to test it? Actually, you can test _any_ branch of _any_ U
 - Save the config.
 - That's it! You can now run it or even debug the tests with breakpoints and everything.
 
+#### Run Unciv unit tests from command line
+<sub>(Adapted by @will-ca from instructions for Android Studio. Blame him if this is broken or bad practice.)</sub>
+
+<!-- Note: I don't know if this will automatically rebuild/re-run tests as needed when code changes. Please remove this comment if it's fine. -->
+<!-- Additionally, I haven't observed any difference caused by adding the --tests argument. That said, I haven't looked much into either these concerns yet. -@will-ca -->
+
+```bash
+$ ./gradlew tests:test --tests "com.unciv.testing.*"
+```
+
 ### Getting a *jar* from your branch
 - Checkout the branch, verify it runs fine in the debugger.
 - Open the terminal pane (little tab bottom left), `./gradlew desktop:dist` like described [here](https://github.com/yairm210/Unciv/wiki/Building-locally-without-Android-Studio).
