@@ -103,6 +103,19 @@ You see a PR and want to test it? Actually, you can test _any_ branch of _any_ U
 - Look in event log for the 'locate' link or under ./android/build/outputs/apk/debug for your apk.
 - I suggest you rename it to `Unciv-yourgithubname-branchname-debug.apk` if you want to keep it or show it to someone.
 
+### Some more useful gradle commands
+- `./gradlew desktop:clean core:clean android:clean server:clean tests:clean` clean code, force recompilation
+- `./gradlew --warning-mode all --stack-trace ...???` look for deprecated stuff in our build scripts to prepare for a gradle major upgrade
+- Look in [buildAndDeploy.yml](https://github.com/yairm210/Unciv/blob/master/.github/workflows/buildAndDeploy.yml) for reference.
+        - Packr prerequisites: Download [packr-all-4.0.0.jar](https://github.com/libgdx/packr/releases/download/4.0.0/packr-all-4.0.0.jar) to your project root (and add to .git/info/exclude!)
+        - For Linux download [JRE 11.0.11_9](https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.11%2B9/OpenJDK11U-jre_x64_linux_hotspot_11.0.11_9.tar.gz) as `jre-linux-64.tar.gz` to your project root and exclude from git
+        - For Win32 download [JRE 1.8.0.252 b09](https://github.com/ojdkbuild/ojdkbuild/releases/download/java-1.8.0-openjdk-1.8.0.252-2.b09-x86/java-1.8.0-openjdk-1.8.0.252-2.b09.ojdkbuild.windows.x86.zip) as `jdk-windows-32.zip` to your project root and exclude from git
+        - For Win64 download [JRE 1.8.0.232 b09](https://github.com/ojdkbuild/ojdkbuild/releases/download/java-1.8.0-openjdk-1.8.0.232-1.b09/java-1.8.0-openjdk-1.8.0.232-1.b09.ojdkbuild.windows.x86_64.zip) as `jdk-windows-64.zip` to your project root and exclude from git
+        - Linux bundle: `./gradlew desktop:packrLinux64 desktop:zipLinuxFilesForJar`
+        - Windows bundle: `./gradlew desktop:packrWindows64 desktop:packrWindows32`
+        - Mac bundle: `./gradlew desktop:packrMacOS`
+        - Results from packr are placed in /deploy
+
 ### WIP
 * **Work in Progress**
 
