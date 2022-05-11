@@ -105,7 +105,7 @@ You see a PR and want to test it? Actually, you can test _any_ branch of _any_ U
 
 ### Some more useful gradle commands
 - `./gradlew desktop:clean core:clean android:clean server:clean tests:clean` clean code, force recompilation
-- `./gradlew --warning-mode all --stack-trace ...???` look for deprecated stuff in our build scripts to prepare for a gradle major upgrade
+- `./gradlew --warning-mode all --stack-trace --scan desktop:build` look for deprecated stuff in our build scripts to prepare for a gradle major upgrade (not sure this works!)
 - Look in [buildAndDeploy.yml](https://github.com/yairm210/Unciv/blob/master/.github/workflows/buildAndDeploy.yml) for reference.
         - Packr prerequisites: Download [packr-all-4.0.0.jar](https://github.com/libgdx/packr/releases/download/4.0.0/packr-all-4.0.0.jar) to your project root (and add to .git/info/exclude!)
         - For Linux download [JRE 11.0.11_9](https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.11%2B9/OpenJDK11U-jre_x64_linux_hotspot_11.0.11_9.tar.gz) as `jre-linux-64.tar.gz` to your project root and exclude from git
