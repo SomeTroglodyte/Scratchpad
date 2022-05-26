@@ -13,4 +13,4 @@ Documents potentially helpful to Contributors and my own todo/ideas list
 - [LeaderPortraitScraper](https://github.com/SomeTroglodyte/Scratchpad/blob/master/Demos/LeaderPortraitScraper.md)
 - [GeoffKnorrMusicScraper](https://github.com/SomeTroglodyte/Scratchpad/blob/master/Demos/GeoffKnorrMusicScraper.md)
 Both create mods from public resources for personal use (those resources are not under an open license, so scraping them yourself for personal use is OK, but redistributing the completed mod is not)
-Update: The first one was made available as [pre-packaged mod here](https://github.com/ArchDuque-Pancake/Civ-V-Leader-portraits).
+- Update: The first one was made available as [pre-packaged mod here](https://github.com/ArchDuque-Pancake/Civ-V-Leader-portraits).
