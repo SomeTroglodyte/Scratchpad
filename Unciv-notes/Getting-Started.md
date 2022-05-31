@@ -10,11 +10,6 @@ Setting up Android Studio will download at least one SDK - make sure you get the
 
 Do an update check from within Android Studio immediately, also for SDK tools, SDK and plugins. Updating Android Studio itself requires root, so run it under sudo as shown below, but do not allow it to dowload any optional components in that context - cancel everything until you get to the small intro menu, then bottom-right `Configure->Check for Updates`. When that is done, restart under your normal user and in the same place, no project loaded yet, go to `Configure->Settings->Appearance & Behaviour->System Settings->Android SDK` and check the Status column on the `SDK Platforms` *and* `SDK Tools` tabs and update as applicable (while there also check the build tools issue below), then in the same window go to `Plugins` from the left menu, and check the Kotlin plugin for an update. I'd also suggest going to `Settings->Appearance & Behaviour->System Settings->Memory Settings` and increasing the IDE max heap size if you got RAM to spare.
 
-### The build tools issue
-Since gradle 7 an on-demand load of SDK Build tools fails (you'll know when you see something mentioning `ZipFile.<init>(java.nio.channels.SeekableByteChannel)`). Therefore you need to pre-install the exact expected version yourself. As of 2021-10 that is 30.0.2, not dictated by a project config file (but it could be), but by the gradle version. It is also mentioned in the logs of builds failing for that reason. No version automatically installed and updated would work at this point (in 2021-10 the suggestion would be 31.0.0, and asking for 30 would give you 30.0.3).
-
-To download a specific version, in most cases you **will** need to check the "Show Package Details" checkbox well-hidden in the SDK manager.
-
 ##### Terminal commands - *do not execute everything blindly*
 ```bash
 # New software source - can be removed from update manager
@@ -28,6 +23,11 @@ sudo apt install git android-studio-4.2 -y
 # Run with root rights to self-update - cancel all import settings/download SDK/etc and quit immediately after
 sudo /opt/android-studio/bin/studio.sh
 ```
+
+### The build tools issue
+Since gradle 7 an on-demand load of SDK Build tools fails (you'll know when you see something mentioning `ZipFile.<init>(java.nio.channels.SeekableByteChannel)`). Therefore you need to pre-install the exact expected version yourself. As of 2022-05 that is 30.0.3, not dictated by a project config file (but it could be), but by the gradle version. It is also mentioned in the logs of builds failing for that reason. No version automatically installed and updated would work at this point.
+
+To download a specific version, in most cases you **will** need to check the "Show Package Details" checkbox well-hidden in the SDK manager.
 
 ### Java JDK
 The Ubuntu 20.04 default JRE is an OpenJDK 11 variant with a bug rendering it unable to run Unciv (see also [#3770](https://github.com/yairm210/Unciv/issues/3770)). Just installing Android Studio will change the system to use a ubuntu-supplied OpenJDK 14 (full JDK) as default java, and this one boasts the same bug. But it also brought along a separate OpenJDK 11 version not known to `apt` or `update-alternatives` which works - in my case located at `/opt/android-studio/jre`.
