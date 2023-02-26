@@ -6,7 +6,7 @@ I do the install from the [maarten-fonville PPA](http://ppa.launchpad.net/maarte
 
 Pay attention to versions (the PPA offers betas) - if in doubt google first. The shell snippets below show how I chose 4.2 over 4.1 - this got me a beta which then self-updated to a RC1, and which suggested a SDK unsuitable for Unciv, but in the end was just fine.
 
-Setting up Android Studio will download at least one SDK - make sure you get the one Unciv specifies (as of 2021-10 that is API level 30 matching Android 11 "R"), Unciv will not build against a different API level SDK. The required API can be looked up in the file [android/build.gradle.kts](https://github.com/yairm210/Unciv/blob/master/android/build.gradle.kts) - check compileSdk and targetSdk lines.
+Setting up Android Studio will download at least one SDK - make sure you get the one Unciv specifies (as of 2023-02 that is API level 32 matching Android 12L "Sv2"), Unciv will not build against a different API level SDK. The required API can be looked up in the file [android/build.gradle.kts](https://github.com/yairm210/Unciv/blob/master/android/build.gradle.kts) - check compileSdk and targetSdk lines.
 
 Do an update check from within Android Studio immediately, also for SDK tools, SDK and plugins. Updating Android Studio itself requires root, so run it under sudo as shown below, but do not allow it to dowload any optional components in that context - cancel everything until you get to the small intro menu, then bottom-right `Configure->Check for Updates`. When that is done, restart under your normal user and in the same place, no project loaded yet, go to `Configure->Settings->Appearance & Behaviour->System Settings->Android SDK` and check the Status column on the `SDK Platforms` *and* `SDK Tools` tabs and update as applicable (while there also check the build tools issue below), then in the same window go to `Plugins` from the left menu, and check the Kotlin plugin for an update. I'd also suggest going to `Settings->Appearance & Behaviour->System Settings->Memory Settings` and increasing the IDE max heap size if you got RAM to spare.
 
@@ -25,16 +25,35 @@ sudo /opt/android-studio/bin/studio.sh
 ```
 
 ### The build tools issue
-Since gradle 7 an on-demand load of SDK Build tools fails (you'll know when you see something mentioning `ZipFile.<init>(java.nio.channels.SeekableByteChannel)`). Therefore you need to pre-install the exact expected version yourself. As of 2022-05 that is 30.0.3, not dictated by a project config file (but it could be), but by the gradle version. It is also mentioned in the logs of builds failing for that reason. No version automatically installed and updated would work at this point.
+Since gradle 7 an on-demand load of SDK Build tools fails (you'll know when you see something mentioning `ZipFile.<init>(java.nio.channels.SeekableByteChannel)`). Therefore you need to pre-install the exact expected version yourself. As of 2023-02 that is 32.0.0, not dictated by a project config file (but it could be), but by the gradle version. It is also mentioned in the logs of builds failing for that reason. No version automatically installed and updated would work at this point.
 
 To download a specific version, in most cases you **will** need to check the "Show Package Details" checkbox well-hidden in the SDK manager.
 
 ### Java JDK
-The Ubuntu 20.04 default JRE is an OpenJDK 11 variant with a bug rendering it unable to run Unciv (see also [#3770](https://github.com/yairm210/Unciv/issues/3770)). Just installing Android Studio will change the system to use a ubuntu-supplied OpenJDK 14 (full JDK) as default java, and this one boasts the same bug. But it also brought along a separate OpenJDK 11 version not known to `apt` or `update-alternatives` which works - in my case located at `/opt/android-studio/jre`.
+The Ubuntu 20.04 default JRE is an OpenJDK 11 variant with a bug rendering it unable to run Unciv (and other Gdx games; see also [#3770](https://github.com/yairm210/Unciv/issues/3770)). Just installing Android Studio will change the system to use a ubuntu-supplied OpenJDK 14 (full JDK) as default java, and this one boasts the same bug. But it also brought along a separate OpenJDK 11 version not known to `apt` or `update-alternatives` which works - in my case located at `/opt/android-studio/jbr`.
 
 After cloning your fork into Android Studio, I'd suggest you immediately check its JDK settings and change it to use said bundled JDK - with a different one you might get [gradle errors](https://duckduckgo.com/?q="org.codehaus.groovy.control.MultipleCompilationErrorsException") or the ubuntu bug. `File->Project Structure->SDK Location`, field `JDK location`. Just ensure the first option from the dropdown named `Embedded...` is selected - in my case it was not for whatever reason.
 
 If you did need to change the project JDK, thanks to gradle having already run unasked, you might get a stale cache - if you see an unsuccessful gradle build at first, look for the well-hidden `File/Invalidate Caches` command.
+
+#### Adoptium JDKs
+
+Instead of preferring the Studio-bundled JDK, you can opt for more current JDK's from adoptium.net. The archives the site offers to download are just the files without installer, and they work as long as you manage how they're called yourself. But... You can also install them via `apt`, and then `update-alternatives` will work just fine. You can run IDE, Gradle and debugger under the same JDK 17. Duckducked how-tos may suggest configuring the source using `/etc/os-release` - this will **NOT** work on mint, that gives the Mint codename while you need the Ubuntu one - e.g. you need `focal` not `una`. Using add-apt-repository will avoid that issue - but unsually it will not automaticall pull the authentication key. The key can be added with the Software Sources app maintenance page or with apt-key add:
+
+##### Terminal commands - *do not execute everything blindly*
+```bash
+# Repository
+sudo add-apt-repository https://packages.adoptium.net/artifactory/deb
+# Signing key
+wget -O - https://packages.adoptium.net/artifactory/api/gpg/key/public | sudo apt-key add -
+# Install
+sudo apt update
+sudo apt install temurin-17-jdk
+sudo apt purge default-jre openjdk-11-* openjdk-14-*
+# Check
+sudo update-java-alternatives -l
+java -version
+```
 
 ### git and SSH
 If you can't clone your fork of the repo due to login/authentication errors, consider setting up your github account for SSH access as [described here](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) and summarized in the shell code section below. For example, if your account has been set up to use SSH and you move to a different machine, you could get problems - in my case there were no keys whatsoever, and therefore none that matched those github knew about.
