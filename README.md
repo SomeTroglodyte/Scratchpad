@@ -12,5 +12,7 @@ Documents potentially helpful to Contributors and my own todo/ideas list
 ### Demos
 - [LeaderPortraitScraper](https://github.com/SomeTroglodyte/Scratchpad/blob/master/Demos/LeaderPortraitScraper.md)
 - [GeoffKnorrMusicScraper](https://github.com/SomeTroglodyte/Scratchpad/blob/master/Demos/GeoffKnorrMusicScraper.md)
-Both create mods from public resources for personal use (those resources are not under an open license, so scraping them yourself for personal use is OK, but redistributing the completed mod is not)
-- Update: The first one was made available as [pre-packaged mod here](https://github.com/ArchDuque-Pancake/Civ-V-Leader-portraits).
+- [Get original music from Уоutubе](https://github.com/SomeTroglodyte/Scratchpad/blob/master/Demos/Fetch%20Civ%20V%20or%20VI%20Soundtracks%20from%20Y-vomit-tube.md)
+- [Get Leader Voices from itch](https://github.com/SomeTroglodyte/Scratchpad/blob/master/Demos/Leader-voices-scraper.md)
+- All create mods from public resources for personal use (those resources are not under an open license, so scraping them yourself for personal use is OK, but redistributing the completed mod is not)
+- Update: The first one was made available as [pre-packaged mod with higher resolution here](https://github.com/ArchDuque-Pancake/Civ-V-Leader-portraits).
