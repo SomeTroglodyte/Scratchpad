@@ -1,7 +1,7 @@
 # SomeTroglodyte's Scratchpad
 Collection of knowledge gained from playing with [Unciv](https://github.com/yairm210/Unciv)
 
-![image](https://github.com/yairm210/Unciv/blob/master/extraImages/Unciv%20icon%20v4%20Simplified%2032.png?raw=true)
+![image](https://github.com/yairm210/Unciv/blob/master/extraImages/Icons/Unciv%20icon%20v4%20Simplified%2032.png?raw=true)
 
 ### Unciv-notes
 Documents potentially helpful to Contributors and my own todo/ideas list
