@@ -217,7 +217,7 @@ soundnamemap = {
 
 leaderimagefolder = "Images/LeaderIcons"
 musicfolder = "music"
-soundfolder = "sounds"
+soundfolder = "voices"
 
 def getSoundNation(fname):
 	name, ext = os.path.splitext(fname)
