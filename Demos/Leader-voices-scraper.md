@@ -10,7 +10,7 @@ Goal: Convert said download into a Mod for Unciv, containing Leader Voices for c
 * Export all files - the ones you don't need are few, and AssetRipper exports a lot of junk you don't need anyway.
 * Navigate down to AssetRipperExport***/ExportedProject/Assets/AudioClip.
 * Move all files into your future mod's root, and if you want them, those from Texture2D too (only if you're not planning to use a better source for leader portraits).
-* Place the Leader-voices-scraper.py script into the same folder the extracted files are now in.
+* Place the [Leader-voices-scraper.py](https://github.com/SomeTroglodyte/Scratchpad/blob/master/Demos/Leader-voices-scraper.py) script into the same folder the extracted files are now in. It's available right where in this repo and folder - follow the link and hit the little download button top right corner, two steps to the right of the "Raw" button.
 
 * Run the Leader-voices-scraper.py script - make sure to use a recent Python 3 interpreter.
 * You may remove AssetRipper, the APK, the AssetRipperExport* folder and my script now.
